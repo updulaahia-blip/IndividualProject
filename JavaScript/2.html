@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Clásico Ticket Order</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    max-width: 450px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.container input, select, button {
+    width: 100% ;
+    height: auto;
+    padding: 8px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.container button {
+    margin-top: 15px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.container button:hover {
+    background-color: #004999;
+}
+
+#message {
+    margin-top: 10px;
+    color: red;
+    text-align: center;
+}
+
+#result {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e8f4ff;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+
+<h1>El Clásico Ticket Order</h1>
+<h3>Barcelona vs Real Madrid</h3>
+
+<div class="container">
+
+    <label>Full Name</label>
+    <input type="text" id="customerName" placeholder="Enter your name">
+
+    <label>Address</label>
+    <input type="text" id="address" placeholder="Enter your address">
+
+    <label>Seat Section</label>
+    <select id="seat">
+        <option value="">Select Seat </option>
+        <option value="A">Section A (Front)</option>
+        <option value="B">Section B (Middle)</option>
+        <option value="C">Section C (Back)</option>
+    </select>
+
+    <label>Choose Team</label>
+    <select id="team">
+        <option value="">Select Team</option>
+        <option value="Barcelona">Barcelona</option>
+        <option value="Real Madrid">Real Madrid</option>
+    </select>
+
+    <label>Ticket Type</label>
+    <select id="ticketType">
+        <option value="">Select Ticket Type </option>
+        <option value="regular">Regular ($50)</option>
+        <option value="vip">VIP ($120)</option>
+    </select>
+
+    <label>Number of Tickets</label>
+    <input type="number" id="quantity" placeholder="Enter quantity">
+
+    <button id="orderBtn">Order Ticket</button>
+
+    <p id="message"></p>
+
+    <div id="result">
+        <p id="summary"></p>
+    </div>
+
+</div>
+
+<script src="2.js"></script>
+</body>
+</html>
